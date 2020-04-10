@@ -1,4 +1,7 @@
 # GridView for MVC - Batch Edit - How to edit a grid field using the MVCxTreeList control located inside MVCxDropDownEdit
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/254660929/)**
+<!-- run online end -->
 
 This example illustrates how to:
 - Replace the default column editor with the MVCxDropDownEdit control and put the MVCxTreeView control into the dropdown window template;
