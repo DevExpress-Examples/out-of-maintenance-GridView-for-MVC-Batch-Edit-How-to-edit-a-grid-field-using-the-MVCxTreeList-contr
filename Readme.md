@@ -17,5 +17,6 @@ This example illustrates how to:
 * [_GridViewPartial.cshtml](./CS/WebApplication1/Views/Home/_GridViewPartial.cshtml)(VB: [_GridViewPartial.vbhtml](./VB/WebApplication1/Views/Home/_GridViewPartial.vbhtml))
 * [_TreeListPartial.cshtml](./CS/WebApplication1/Views/Home/_TreeListPartial.cshtml)(VB: [_TreeListPartial.vbhtml](./VB/WebApplication1/Views/Home/_TreeListPartial.vbhtml))
 * [BatchEditScripts.js](./CS/WebApplication1/Scripts/CustomScripts/BatchEditScripts.js)
+* [ValueAndDisplayTextHelper.cs](./CS/WebApplication1/Code/ValueAndDisplayTextHelper.cs)(VB: [ValueAndDisplayTextHelper.vb](./VB/WebApplication1/Code/ValueAndDisplayTextHelper.vb))
 
 <!-- default file list end -->
