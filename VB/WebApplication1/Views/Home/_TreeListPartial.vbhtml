@@ -21,14 +21,17 @@
                                                                                     Dim textsString As String = ViewBag.Selection
                                                                                     Dim texts = textsString.Split(","c)
                                                                                     Dim nodesText As New List(Of String)()
+                                                                                    Dim nodesValues As New List(Of String)()
                                                                                     For Each textString In texts
                                                                                         tl.FindNodesByFieldValue("LicenseName", textString).ForEach(Sub(node)
                                                                                                                                                         If Not node.Selected Then
                                                                                                                                                             node.Selected = True
                                                                                                                                                             nodesText.Add(node.GetValue("LicenseName").ToString())
+                                                                                                                                                            nodesValues.Add(node.GetValue("LicenseID").ToString())
                                                                                                                                                         End If
                                                                                                                                                     End Sub)
                                                                                     Next textString
+                                                                                    tl.JSProperties.Add("cp_selectedValues", nodesValues)
                                                                                     tl.JSProperties.Add("cp_selectedTexts", nodesText)
                                                                                 End If
                                                                             End If

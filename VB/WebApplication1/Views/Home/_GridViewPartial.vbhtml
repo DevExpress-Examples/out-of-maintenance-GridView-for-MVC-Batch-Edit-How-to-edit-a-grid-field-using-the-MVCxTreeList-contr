@@ -19,11 +19,10 @@ End Functions
                                      settings.SettingsEditing.Mode = GridViewEditingMode.Batch
                                      settings.ClientSideEvents.BatchEditEndEditing = "OnBatchEditEndEditing"
                                      settings.ClientSideEvents.BatchEditStartEditing = "OnBatchEditStartEditing"
-
+                                     settings.ClientSideEvents.FocusedCellChanging = "OnFocusedCellChanging"
                                      settings.CustomColumnDisplayText = Sub(s, e)
                                                                             OnCustomColumnDisplayText(s, e)
                                                                         End Sub
-
                                      settings.CommandColumn.Visible = True
                                      settings.CommandColumn.ShowEditButton = True
                                      settings.Columns.Add("CustomerID", MVCxGridViewColumnType.TextBox)
@@ -35,9 +34,9 @@ End Functions
                                                                                                  Html.DevExpress().DropDownEdit(Sub(ddeSettings)
                                                                                                                                     ddeSettings.Name = "DropDownEdit1"
                                                                                                                                     ddeSettings.Width = New Unit(100, UnitType.Percentage)
-                                                                                                                                    ddeSettings.Properties.ClientSideEvents.TextChanged = "synchronizeTreeListValues"
-                                                                                                                                    ddeSettings.Properties.ClientSideEvents.DropDown = "synchronizeTreeListValues"
-                                                                                                                                    ddeSettings.Properties.ClientSideEvents.QueryCloseUp = "OnDropDownEditQueryClose"
+                                                                                                                                    ddeSettings.Properties.ClientSideEvents.ValueChanged = "DropDownEdit1_OnValueChanged"
+                                                                                                                                    ddeSettings.Properties.ClientSideEvents.DropDown = "DropDownEdit1_OnDropDown"
+                                                                                                                                    ddeSettings.Properties.ClientSideEvents.QueryCloseUp = "DropDownEdit1_OnQueryCloseUp"
                                                                                                                                     ddeSettings.SetDropDownWindowTemplateContent(Sub(ddec)
                                                                                                                                                                                      'TreeList
                                                                                                                                                                                      Html.ViewContext.Writer.Write("<div class='ctrlContainer'>")

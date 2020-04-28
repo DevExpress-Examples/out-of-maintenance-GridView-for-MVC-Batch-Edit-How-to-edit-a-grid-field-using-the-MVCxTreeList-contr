@@ -23,14 +23,17 @@
                 string textsString = ViewBag.Selection;
                 var texts = textsString.Split(',');
                 List<string> nodesText = new List<string>();
+                List<string> nodesValues = new List<string>();
                 foreach (var text in texts) {
                     tl.FindNodesByFieldValue("LicenseName", text).ForEach(node => {
                         if (!node.Selected) {
                             node.Selected = true;
                             nodesText.Add(node.GetValue("LicenseName").ToString());
+                            nodesValues.Add(node.GetValue("LicenseID").ToString());
                         }
                     });
                 }
+                tl.JSProperties.Add("cp_selectedValues", nodesValues);
                 tl.JSProperties.Add("cp_selectedTexts", nodesText);
             }
         }
